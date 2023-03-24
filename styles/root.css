@@ -1,0 +1,38 @@
+@layer reset, normalize, app-styles;
+
+@import url('reset.css') layer(reset);
+@import url('normalize.css') layer(normalize);
+
+@layer app-styles {
+  :root {
+    --primary-hue: 200;
+    --primary-saturation: 100%;
+    --primary-lightness: 50%;
+
+    --primary-light: hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+    --primary-text-light: hsl(var(--primary-hue), var(--primary-saturation), 10%);
+    --primary-surface-light: hsl(var(--primary-hue), 25%, 90%);
+
+    --primary-dark: hsl(var(--primary-hue) calc(var(--primary-saturation) / 2) calc(var(--primary-lightness) / 1.5));
+    --primary-text-dark: hsl(var(--primary-hue) 15% 85%);
+    --primary-surface-dark: hsl(var(--primary-hue) 10% 10%);
+  }
+  :root, html[data-theme='light'] {
+    --primary: var(--primary-light);
+    --primary-text: var(--primary-text-light);
+    --primary-surface: var(--primary-surface-light);
+  }
+  html[data-theme='dark'] {
+    --primary: var(--primary-dark);
+    --primary-text: var(--primary-text-dark);
+    --primary-surface: var(--primary-surface-dark);
+  }
+
+  body {
+    height: 100%;
+    background-color: var(--primary-surface);
+  }
+  .primary {
+    color: var(--primary);
+  }
+}
