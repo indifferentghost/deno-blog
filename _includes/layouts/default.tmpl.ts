@@ -22,7 +22,7 @@ export default ({ title, content, comp: components }: PageData, _filters: PageHe
   return (
     html`<!DOCTYPE html>
     <html lang="en">
-      ${components['dark-mode.tmpl']()}
+      ${components['dark-mode']()}
       <head>
         <meta charset="utf-8" />
         <title>${title}</title>
@@ -32,6 +32,7 @@ export default ({ title, content, comp: components }: PageData, _filters: PageHe
         <link rel="stylesheet" href="styles/root.css" />
       </head>
       <body>
+        ${components.test({ title: 'hello' })}
         <main>
           ${content}
         </main>
