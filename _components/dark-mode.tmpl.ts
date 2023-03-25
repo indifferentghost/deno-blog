@@ -13,9 +13,9 @@ export default html`
       query.addEventListener("change", handleRequestChange);
       fn(query.matches);
 
-      document.addEventListener("beforeunload", handleRequestChange, {
-        once: true,
-      });
+      document.addEventListener("beforeunload", () => {
+        query.removeEventListener("change", handleRequestChange);
+      }, { once: true });
     };
 
     runColorMode((darkMode) => {

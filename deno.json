@@ -7,6 +7,11 @@
   "imports": {
     "lume/": "https://deno.land/x/lume@v1.15.3/",
     "html/": "https://deno.land/x/html@v1.2.0/",
-    "@/": "./_includes/"
+    "preact/": "https://esm.sh/preact@10.13.1/",
+    "@i/": "./_includes/"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
   }
 }

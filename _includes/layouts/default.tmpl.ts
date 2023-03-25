@@ -1,6 +1,5 @@
 import type { PageData, PageHelpers } from "lume/core.ts";
 import { html } from "html/mod.ts";
-import DarkMode from "@/components/dark-mode.tmpl.ts";
 
 /**
  * <meta property="og:title" content="" />
@@ -19,11 +18,11 @@ import DarkMode from "@/components/dark-mode.tmpl.ts";
  * <meta name="theme-color" content="#fafafa" />
  */
 
-export default ({ title, content }: PageData, _filters: PageHelpers) => {
+export default ({ title, content, comp: components }: PageData, _filters: PageHelpers) => {
   return (
     html`<!DOCTYPE html>
     <html lang="en">
-      ${DarkMode}
+      ${components['dark-mode.tmpl']()}
       <head>
         <meta charset="utf-8" />
         <title>${title}</title>
