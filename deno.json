@@ -5,7 +5,7 @@
     "serve": "deno task lume -s"
   },
   "imports": {
-    "lume/": "https://deno.land/x/lume@v1.15.3/",
+    "lume/": "https://deno.land/x/lume@v1.16.0/",
     "html/": "https://deno.land/x/html@v1.2.0/",
     "preact/": "https://esm.sh/preact@10.13.1/",
     "preact/hooks/": "https://unpkg.com/preact@10.13.1/hooks/",
